@@ -25,9 +25,9 @@ public class base {
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\resources\\data.properties");
 		prop.load(fis);
-		// mvn test -Dbrowser=chrome
-		String browserName = System.getProperty("browser"); // checks maven comand
-		//String browserName = prop.getProperty("browser"); //from property file
+		//mvn test -Dbrowser=chrome
+		//String browserName = System.getProperty("browser"); // checks maven comand
+		String browserName = prop.getProperty("browser"); //from property file
 		if (browserName.contains("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\src\\main\\java\\resources\\chromedriver.exe");
